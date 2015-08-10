@@ -2,7 +2,7 @@
 """
 Created on Sat Aug  1 14:50:16 2015
 
-@author: Xing
+@author: Xin
 """
 
 def subsets(s):
