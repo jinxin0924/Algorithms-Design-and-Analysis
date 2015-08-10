@@ -1,2 +1,2 @@
 # Algorithms-Design-and-Analysis
-Stanford Algorithms: Design and Analysis, Part 1
+Practice algorithms in coursera class "Stanford Algorithms: Design and Analysis, Part 1"
