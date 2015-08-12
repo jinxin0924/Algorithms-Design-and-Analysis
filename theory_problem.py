@@ -37,15 +37,14 @@ def findsecond(list1):
 #第二题：找到拐点
 def merge_no2(list1):
     n=len(list1)
-    if n<3:
-        return('error')
-    mid=int(len(list1)/2)
-    if list1[mid-1]<list1[mid]<list1[mid+1]:
-        merge_no2(list1[mid+1:])
-    elif list1[mid-1]>list1[mid]>list1[mid+1]:
-        merge_no2(list1[:mid-1])
-    else:
-        return(list1[mid])
+    if n>3:
+        mid=int(len(list1)/2)
+        if list1[mid-1]<list1[mid]<list1[mid+1]: #中间点与前后两点作比较
+            merge_no2(list1[mid+1:])
+        elif list1[mid-1]>list1[mid]>list1[mid+1]:
+            merge_no2(list1[:mid-1])
+        else:
+            return(list1[mid])
 
 
 #第三题：ai]=[i]
