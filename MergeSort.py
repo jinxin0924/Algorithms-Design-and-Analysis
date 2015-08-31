@@ -31,15 +31,23 @@ def xiaoci(s):
     else:
         return([s])
         
-def replace(s):    
-    if len(s)<=1:
-        return s,
-    s1=s[1:]
-    string=''
-    for i in xiaoci(s[0]):
-        replace(s1)
-        return(string)
-      
+def replace(s,depth):    
+    global string    
+    if depth==0:
+        string=''
+    if len(s)<1:
+        list1.append(string)
+        string=string[:-1]
+    else:
+        depth+=1
+        for i in xiaoci(s[0]):
+            string+=i        
+            replace(s[1:],depth)
+    return list1
+
+list1=[]
+string='' 
+replace('ab',0)  
 #---------------------------------------------------------------------------- 
 #merge sort
 def MergeSort(lists):
