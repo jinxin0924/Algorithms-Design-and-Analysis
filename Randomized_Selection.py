@@ -26,10 +26,11 @@ def rSelection(L,index ,low, high):
         RSelection(L, j+1, high)
 
 
+import random
+import cProfile
 def rselection(num,index): #python list的使用
     global selection
 #    global depth
-    depth+=1
     if len(num)<1:
         return selection
     greater=[]
@@ -51,8 +52,11 @@ def rselection(num,index): #python list的使用
     return selection
 
 #测试
-for i in range(1,9):
-    l=[2, 3, 4, 6, 9, 1, 5,8, 7, 10]
-    selection=0
-    depth=0
-    print(rselection(l,i))
+def main():
+    for i in range(1,9):
+        l=[2, 3, 4, 6, 9, 1, 5,8, 7, 10]
+        selection=0
+        depth=0
+        print(rselection(l,i))
+
+cProfile.run('main()')
