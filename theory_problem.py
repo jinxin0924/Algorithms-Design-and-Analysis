@@ -1,7 +1,8 @@
 __author__ = 'Xin'
 
 
-#第一题：找到第二大的那个,整个包装成一个函数，全局变量变为局部变量
+#第一题：找到第二大的那个数
+# 整个包装成一个函数，全局变量变为局部变量
 def findsecond(list1):
     def merge2nd(list1):
         n=len(list1)
@@ -47,7 +48,7 @@ def merge_no2(list1):
             return(list1[mid])
 
 
-#第三题：ai]=[i]
+#第三题：i=a[i],a是单调递增
 def merge_no3(list1,midindex):
     n=len(list1)
     if n<=1:

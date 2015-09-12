@@ -1,0 +1,26 @@
+2015-9-12
+1.collections
+1）OrderedDict：实现字典输出的有序
+2）defaultdict：使用dict时，如果引用的Key不存在，就会抛出KeyError。如果希望key不存在时，返回一个默认值，就可以用defaultdict
+   1）用法： dd = defaultdict(lambda: 'N/A') or  dd = defaultdict(list)
+   2) 如果希望字典后面跟着list，并且在key不存在时返回list,可以用 c=defaultdict(list), 然后用c[i].append(j)将j加入i映射的list中
+
+
+2. timeit与cProfile
+import timeit
+def f(x,y):
+    return x*y
+v1 = 10
+v2 = 20
+def f_test(): #重新构建新的函数是因为，timeit直接调用有参数函数会出错，提示没有该变量
+    f(v1,v2)
+第一种方法：
+t1=timeit.timeit("f_test()", setup="from __main__ import f_test")
+此时也可以直接用cProfile.run('f_test')查看程序各部分具体时间
+另一种方法：t1=timeit.timeit(lambda: f(x,y))
+理由：
+With lambda, we can bind the parameter a callable function. All that we're doing is creating another function,
+that takes no arguments, and calls another function with arguments.
+It's just as if you'd used def to create another function like that, except that the new function doesn't get a name
+ (because it doesn't need one).
+
