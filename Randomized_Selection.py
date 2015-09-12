@@ -28,6 +28,7 @@ def rSelection(L,index ,low, high):
 
 import random
 import cProfile
+import timeit
 def rselection(num,index): #python list的使用
     global selection
 #    global depth
@@ -60,3 +61,4 @@ def main():
         print(rselection(l,i))
 
 cProfile.run('main()')
+timeit.timeit('main()')
