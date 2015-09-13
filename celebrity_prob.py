@@ -60,7 +60,7 @@ def test1(): #重新构建新的函数是因为timeit直接调用有参数函数
     for i in range(n):
         G[i][c] = 1 #i认识c
         G[c][i] = 0 #c不认识i
-    naive_celeb(G)
+    return naive_celeb(G)
 
 def test2():
     n = 1000
@@ -69,8 +69,7 @@ def test2():
     for i in range(n):
         G[i][c] = 1 #i认识c
         G[c][i] = 0 #c不认识i
-    naive_celeb(G)
-    celeb(G)
+    return celeb(G)
 def test3():
     n = 1000
     G = [[randrange(2) for i in range(n)] for i in range(n)]
@@ -78,8 +77,7 @@ def test3():
     for i in range(n):
         G[i][c] = 1 #i认识c
         G[c][i] = 0 #c不认识i
-    naive_celeb(G)
-    celeb_jx(G)
+    return celeb_jx(G)
 
 print(test1())
 print(str(test2())+'\t'+'celeb')
