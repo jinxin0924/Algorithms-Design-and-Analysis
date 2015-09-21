@@ -24,3 +24,29 @@ that takes no arguments, and calls another function with arguments.
 It's just as if you'd used def to create another function like that, except that the new function doesn't get a name
  (because it doesn't need one).
 
+3. python的排序
+1) 在python中用timsort,先检查有没有segment是已经排好序了的，
+2) timesort比samplesort最优势的地方在于 如果数列中存在有已经排好序的segment,定义run，如果run之间存在某种规律，能总结出来
+
+merge的规则：
+Stability constrains permissible merging patterns.  For example, if we have
+3 consecutive runs of lengths
+
+    A:10000  B:20000  C:10000
+
+we dare not merge A with C first, because if A, B and C happen to contain
+a common element, it would get out of order wrt its occurrence(s) in B.  The
+merging must be done as (A+B)+C or A+(B+C) instead.
+
+So merging is always done on two consecutive runs at a time, and in-place,
+although this may require some temp memory (more on that later).
+
+merge需要delay，来发现patter，但也不能太晚，占用空间
+
+如果有规律，快体现在：在mergesort中的merge过程中满足一定条件进入galloping mode，比较之后，是一段一段的移动。比较是A[0]与B[2**K-1]
+几个点比较，综合比较次数少很多
+
+
+3) lg(n!) is the information-theoretic limit for the best any comparison-based sorting algorithm can do on
+  average (across all permutations: n! possibilities log2  (n!) = log2(n) + log2(n − 1) + ... + log2(2)
+= Ω(n log n).).
