@@ -19,7 +19,7 @@ def greatest2(A):
                 m,result=s,A[i:i+k]
     return m,result
 
-def greatest3(A):
+def greatest3(A): #merge and conquer
     def exchange(A):
         s=sum(A)
         if s>dict1['max']:
@@ -71,7 +71,7 @@ def greatest3(A):
     partition(A)
     return dict1['max'],dict1['result']
 
-
+def greatest4(A):
 
 
 
