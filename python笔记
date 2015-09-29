@@ -50,3 +50,6 @@ merge需要delay，来发现patter，但也不能太晚，占用空间
 3) lg(n!) is the information-theoretic limit for the best any comparison-based sorting algorithm can do on
   average (across all permutations: n! possibilities log2  (n!) = log2(n) + log2(n − 1) + ... + log2(2)
 = Ω(n log n).).
+
+4) eval()将字符串变为变量
+
