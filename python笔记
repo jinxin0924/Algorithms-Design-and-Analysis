@@ -17,7 +17,7 @@ def f_test(): #重新构建新的函数是因为，timeit直接调用有参数�
 第一种方法：
 t1=timeit.timeit("f_test()", setup="from __main__ import f_test")
 此时也可以直接用cProfile.run('f_test')查看程序各部分具体时间
-另一种方法：t1=timeit.timeit(lambda: f(x,y))
+另一种方法：t1=timeit.timeit(lambda: f(x,y)),print(t1)
 理由：
 With lambda, we can bind the parameter a callable function. All that we're doing is creating another function,
 that takes no arguments, and calls another function with arguments.

@@ -76,18 +76,18 @@ def greatest3(A):
 
 
 n=30
-# A=[random.randint(-100,100) for i in range(n)]
-A=[78, -34, 73, -45, -50, -99, -56, -68, 94, -40, -54, -5, 2, -65, -81, -21, -26, 57, -1, -36, 29, 94, -77, -68, 36, 12, -51, -26, 38, 84]
+A=[random.randint(-100,100) for i in range(n)]
+# A=[78, -34, 73, -45, -50, -99, -56, -68, 94, -40, -54, -5, 2, -65, -81, -21, -26, 57, -1, -36, 29, 94, -77, -68, 36, 12, -51, -26, 38, 84]
 print(A)
-# print(greatest1(A))
-# print(greatest2(A))
-# print(greatest3(A))
+print(greatest1(A)) 
+print(greatest2(A))
+print(greatest3(A))
 
 import timeit
-t1=timeit.timeit(lambda: greatest1(A))
-t2=timeit.timeit(lambda: greatest2(A))
-t3=timeit.timeit(lambda: greatest3(A))
+t1=timeit.timeit(lambda: A)
+t2=timeit.timeit(lambda: A)
+t3=timeit.timeit(lambda: A)
 
-print(t1.repeat(3,10))
-print(t2.repeat(3,10))
-print(t3.repeat(3,10))
+print(t1)
+print(t2)
+print(t3)
