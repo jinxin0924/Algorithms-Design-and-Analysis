@@ -87,7 +87,13 @@ import timeit
 t1=timeit.timeit(lambda: A)
 t2=timeit.timeit(lambda: A)
 t3=timeit.timeit(lambda: A)
-
 print(t1)
 print(t2)
 print(t3)
+t1=timeit.Timer(lambda: A)
+t2=timeit.Timer(lambda: A)
+t3=timeit.Timer(lambda: A)
+
+print(t1.repeat(3,100))
+print(t2.repeat(3,100))
+print(t3.repeat(3,100))
