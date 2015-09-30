@@ -71,7 +71,12 @@ def greatest3(A): #merge and conquer
     partition(A)
     return dict1['max'],dict1['result']
 
-def greatest4(A):
+def greatest4(A): #吊吊吊吊，dynamic programming，时间O(n)
+    best = cur = 0
+    for i in A:
+        cur = max(cur + i, 0)
+        best = max(best, cur)
+    return best
 
 
 
@@ -82,18 +87,21 @@ print(A)
 print(greatest1(A)) 
 print(greatest2(A))
 print(greatest3(A))
+print(greatest4(A))
 
-import timeit
-t1=timeit.timeit(lambda: A)
-t2=timeit.timeit(lambda: A)
-t3=timeit.timeit(lambda: A)
-print(t1)
-print(t2)
-print(t3)
-t1=timeit.Timer(lambda: A)
-t2=timeit.Timer(lambda: A)
-t3=timeit.Timer(lambda: A)
-
-print(t1.repeat(3,100))
-print(t2.repeat(3,100))
-print(t3.repeat(3,100))
+# import timeit
+# t1=timeit.timeit(lambda: A)
+# t2=timeit.timeit(lambda: A)
+# t3=timeit.timeit(lambda: A)
+# t4=timeit.timeit(lambda: A)
+# print(t1)
+# print(t2)
+# print(t3)
+# print(t4)
+# t1=timeit.Timer(lambda: A)
+# t2=timeit.Timer(lambda: A)
+# t3=timeit.Timer(lambda: A)
+#
+# print(t1.repeat(3,100))
+# print(t2.repeat(3,100))
+# print(t3.repeat(3,100))
