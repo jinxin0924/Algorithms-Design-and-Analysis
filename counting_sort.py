@@ -1,4 +1,4 @@
-__author__ = 'Xing'
+__author__ = 'Xin'
 
 from collections import defaultdict
 import random

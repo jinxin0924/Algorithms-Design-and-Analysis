@@ -1,4 +1,4 @@
-__author__ = 'Xing'
+__author__ = 'Xin'
 
 #原理懂，但是class看不太懂！
 

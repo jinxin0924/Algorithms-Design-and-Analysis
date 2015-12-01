@@ -1,4 +1,4 @@
-__author__ = 'Xing'
+__author__ = 'Xin'
 import math
 
 def closet_pairs(L):

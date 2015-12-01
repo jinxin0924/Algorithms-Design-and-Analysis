@@ -1,4 +1,4 @@
-__author__ = 'Xing'
+__author__ = 'Xin'
 def rec_dfs(G, s, S=None):
     if S is None: S = set()
     S.add(s)

@@ -1,4 +1,4 @@
-__author__ = 'Xing'
+__author__ = 'Xin'
 import random
 def greatest1(A):
     n=len(A)

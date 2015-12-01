@@ -1,4 +1,4 @@
-__author__ = 'Xing'
+__author__ = 'Xin'
 
 #Python Algorithms- Mastering Basic Algorithms in the Python Language, Page 82
 # looking for one node with incoming edges from all other nodes, but with no outgoing edges.

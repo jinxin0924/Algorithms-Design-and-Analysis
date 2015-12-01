@@ -1,4 +1,4 @@
-__author__ = 'Xing'
+__author__ = 'Xin'
 
 #不懂！！！！！！！
 def cover(board, lab=1, top=0, left=0, side=None):
